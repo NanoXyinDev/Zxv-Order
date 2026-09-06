@@ -1,0 +1,2 @@
+const {sql}=require("@vercel/postgres");
+module.exports=async(req,res)=>{try{await sql`SELECT 1`;res.json({ok:true,service:"zxvcode-order",database:"online"});}catch(e){res.status(503).json({ok:false,database:"offline"});}};
