@@ -1,0 +1,1 @@
+const {userBySession}=require('../../lib');module.exports=async(req,res)=>{try{const u=await userBySession(req);if(!u)return res.status(401).json({error:'Unauthorized'});res.json({ok:true,balance:Number(u.balance),username:u.username})}catch(e){res.status(500).json({error:'Gagal mengambil saldo'})}};
