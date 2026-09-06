@@ -1,1 +1,0 @@
-module.exports=async(req,res)=>res.status(410).json({error:"Manual add disabled. Use SSH Check & Add so unverified credentials can never enter stock."});
