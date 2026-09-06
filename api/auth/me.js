@@ -1,0 +1,1 @@
+const {userBySession}=require('../../lib');module.exports=async(req,res)=>{try{const u=await userBySession(req);if(!u)return res.status(401).json({authenticated:false});res.json({authenticated:true,user:{id:u.id,username:u.username,role:u.role,balance:Number(u.balance)}})}catch(e){res.status(500).json({error:'Session check failed'})}};
