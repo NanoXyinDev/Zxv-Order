@@ -1,1 +1,0 @@
-const bcrypt=require('bcryptjs'); const p=process.argv[2]; if(!p) throw new Error('Usage: node scripts-generate-hash.js YOUR_PASSWORD'); bcrypt.hash(p,12).then(console.log);
